@@ -1,5 +1,13 @@
-# use with: shell> mysql < db_build.txt (i think)
-USE cruzmail;
+# usage: terminal/command line
+# create a database:
+# type: 'mysql -u root' to launch mysql terminal
+# CREATE DATABASE db_name;
+# You can type 'show databases;' to make sure your db has been successfully created.
+# mysql -u root -A db_name < db_dump.sql
+# Make sure you are using the correct database.
+# Type 'USE db_name;' to use the right db.
+# May have to edit a configuration file in Django to connect to this database.
+
 CREATE TABLE mailstops_master (
   mailstop VARCHAR(20) NOT NULL,
   ms_status ENUM('active','inactive') NOT NULL DEFAULT 'active',
